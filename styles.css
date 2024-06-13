@@ -1,0 +1,751 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #111317;
+}
+
+body section {
+    height: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #333; */
+    padding: 32px 16px;
+    margin: 0px 72px;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.links li {
+    margin-left: 20px;
+}
+
+.links a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: text-decoration 1.3s ease;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #9EF01A;
+}
+
+.join {
+    background-color: rgb(158, 240, 26);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    color: #111317;
+    font-size: 16px;
+    padding: 16px 32px;
+    margin-left: 10rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.join:hover {
+    background-color: #006400;
+    color: aliceblue;
+
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .links {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    .links li {
+        margin: 0;
+    }
+
+    .links a {
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+
+.middleMain {
+    padding: 32px 16px 80px;
+    margin: 0px 72px;
+    display: flex;
+    align-items: center;
+
+}
+
+.fir {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #9EF01A;
+    z-index: -1;
+
+}
+
+.middleMain div {
+    height: auto;
+}
+
+.leftContent {
+    display: block;
+    width: 50%;
+
+}
+
+.h4 {
+    color: #9EF01A;
+    font-size: 20px;
+}
+
+.h1 {
+    font-size: 80px;
+    color: aliceblue;
+    font-weight: bolder;
+    margin-top: 50px;
+}
+
+.h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px aliceblue;
+}
+
+.leftContent p {
+    color: aliceblue;
+    word-spacing: 2px;
+    line-height: 1.5;
+    margin-top: 50px;
+}
+
+.get {
+    padding: 16px 32px;
+    margin-top: 30px;
+    background-color: #9EF01A;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+}
+
+.get:hover {
+    background-color: #006400;
+    color: aliceblue;
+}
+
+.imag {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.F {
+    position: absolute;
+    color: aliceblue;
+    z-index: -1;
+    bottom: 0;
+    left: 50%;
+    font-size: 100px;
+    color: #6C757D;
+    font-weight: bolder;
+    transform: translate(-70%, 150%);
+    letter-spacing: 2rem;
+}
+
+.THIR {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #9EF01A;
+    z-index: -1;
+
+}
+
+.xploreGrid {
+    width: 100%;
+    padding: 32px 16px 80px;
+}
+
+.xploreGrid div {
+    height: auto;
+}
+
+.xploreProg {
+    height: 71px;
+    width: 1199px;
+    /* padding: 32px 16px 80px; */
+    margin: 0px 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.xploreProg h2 {
+    font-size: 45px;
+    color: aliceblue;
+}
+
+.xploreNav {
+    height: 115px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    padding: 0 6px;
+    font-size: 1.5rem;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.left:hover {
+    color: #9EF01A;
+    border-color: #9EF01A;
+}
+
+.right {
+    padding: 0 6px;
+    font-size: 1.5rem;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.right:hover {
+    color: #9EF01A;
+    border-color: #9EF01A;
+}
+
+.xploreCards {
+    width: 1200px;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+@media(max-width: 900px) {
+    .xploreCards {
+        display: block;
+    }
+
+    .card {
+        width: 300px
+    }
+}
+
+.xploreCards div {
+    height: auto;
+}
+
+.card {
+    /* width: 268px; */
+    background-color: #1f2125;
+    /* display: inline-block; */
+    font-size: 16px;
+    color: aliceblue;
+    padding: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Semi-transparent white overlay */
+    transition: height 0.3s ease;
+    /* Apply transition effect on width */
+    z-index: -1;
+}
+
+.card:hover::before {
+    height: 100%;
+    /* Expand overlay width on hover */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border: 1px solid #9EF01A;
+}
+
+.card span {
+    background-color: #9EF01A;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.card h4 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #9EF01A;
+}
+
+.card i {
+    margin-left: 5px;
+}
+
+.container {
+    padding: 80px 16px;
+    margin: 0px 72px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.fiir {
+    transform: translateX(13%);
+}
+
+.fiir img {
+    border-radius: 20px;
+}
+
+.seec img {
+    border-radius: 20px;
+}
+
+.seec {
+    transform: translateY(-50%);
+}
+
+.four {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #9EF01A;
+    z-index: -1;
+}
+
+.content {
+    color: aliceblue;
+}
+
+.content h2 {
+    font-size: 40px;
+
+}
+
+.content p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.enroll {
+    padding: 16px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #9EF01A;
+    margin-top: 60px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.enroll:hover {
+    background-color: #006400;
+    color: aliceblue;
+}
+
+.whyJoin {
+    padding: 50px 16px;
+    margin: 0px 72px;
+    height: 900px;
+    color: aliceblue;
+}
+
+.whyJoin h2 {
+    font-size: 36px;
+}
+
+.whyJoin p {
+    font-size: 20px;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+.joinImage {
+    height: 520px;
+    width: 100%;
+    margin-top: 60px;
+    padding: 16px;
+    background-image: url("sven-mieke-MsCgmHuirDo-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pros {
+    position: absolute;
+    width: 80%;
+    transform: translate(2.5%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-color: #1f2125;
+    padding: 32px;
+    border-radius: 20px;
+}
+
+.pros span {
+    background-color: #9EF01A;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.pros h4 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.pros p {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pros a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.pros a:hover {
+    color: #9EF01A;
+}
+
+.pros i {
+    margin-left: 5px;
+}
+
+.prices {
+    padding: 50px 16px;
+    margin: 0px 72px;
+    height: 900px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prices h2 {
+    font-size: 36px;
+}
+
+.prices p {
+    font-size: 20px;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+.priceGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    padding: 32px 16px;
+    margin-top: 74px;
+}
+
+.priceDiv {
+    padding: 48px 32px;
+    border-radius: 10px;
+    background-color: #1f2125;
+}
+
+.priceDiv h4 {
+    font-size: 20px;
+    margin: 0px 0px 16px;
+}
+
+.priceDiv h3 {
+    font-size: 32px;
+    margin: 0px 0px 32px;
+    padding: 0px 0px 16px;
+    border-bottom: 1px solid aliceblue;
+}
+
+.priceDiv i {
+    margin-right: 5px;
+    padding: 3px;
+    font-size: small;
+    color: #9EF01A;
+    border: 1px solid #9EF01A;
+    border-radius: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.priceDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white overlay */
+    transition: height 0.3s ease;
+    /* Apply transition effect on width */
+    z-index: -1;
+}
+
+.priceDiv:hover::before {
+    height: 100%;
+    /* Expand overlay width on hover */
+}
+
+.priceDiv:hover {
+    transform: scale(1);
+    border: 1px solid #9EF01A;
+}
+
+
+.priceJoin1 {
+    padding: 16px 80px;
+    background: none;
+    outline: none;
+    border: 1px solid #9EF01A;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #9EF01A;
+    cursor: pointer;
+    margin-top: 100px;
+    transform: translateY(290%);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.priceJoin1:hover {
+    background-color: #9EF01A;
+    color: black;
+}
+
+.priceJoin2 {
+    padding: 16px 80px;
+    background: none;
+    outline: none;
+    border: 1px solid #9EF01A;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #9EF01A;
+    cursor: pointer;
+    margin-top: 100px;
+    transform: translateY(210%);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.priceJoin2:hover {
+    background-color: #9EF01A;
+    color: black;
+}
+
+.priceJoin3 {
+    padding: 16px 80px;
+    background: none;
+    outline: none;
+    border: 1px solid #9EF01A;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #9EF01A;
+    cursor: pointer;
+    margin-top: 100px;
+    transform: translateY(50%);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.priceJoin3:hover {
+    background-color: #9EF01A;
+    color: black;
+}
+
+.reviews {
+    padding: 80px 80px;
+    background-color: #1f2125;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    gap: 5rem;
+}
+
+.reviews span {
+    font-size: 9rem;
+    font-weight: lighter;
+    color: #9EF01A;
+}
+
+.revContent h4 {
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: lighter;
+
+
+}
+
+.rev {
+    color: aliceblue;
+    font-size: 1rem;
+    margin-top: 25px;
+}
+
+.stars {
+    color: #9EF01A;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    margin-top: 50px;
+}
+
+.user {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.userImage img {
+    max-width: 60px;
+    border-radius: 100%;
+}
+
+.userInfo {
+    color: aliceblue;
+    display: inline-block;
+    margin-left: 20px;
+
+}
+
+.userInfo h5 {
+    font-size: 2rem;
+}
+
+.footer {
+    padding: 80px 16px;
+    margin: 0px 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foot p {
+    margin-top: 40px;
+    font-size: 16px;
+    color: aliceblue;
+}
+
+.footLinks {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footLinks a {
+    text-decoration: none;
+    color: #9EF01A;
+    border: 1px solid #9EF01A;
+    border-radius: 100%;
+    padding: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.footLinks a:hover {
+    background-color: #9EF01A;
+    color: black;
+}
+
+.last * {
+    display: block;
+    text-decoration: none;
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+.last h4 {
+    font-size: 1.5rem;
+}
+
+.last a {
+    transition: all 0.1s ease-in-out;
+}
+
+.last a:hover {
+    color: #9EF01A;
+}
+
+.footerBar {
+    max-width: 100%;
+    margin: 0px 72px;
+    padding: 10px;
+    font-size: 0.8rem;
+    color: aliceblue
+}
